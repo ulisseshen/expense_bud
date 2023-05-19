@@ -13,38 +13,37 @@ class OnboardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
+      body: ListView(
         padding: const EdgeInsets.all(Insets.lg),
-        child: Column(
-          children: [
-            const Gap(64),
-            Image.asset(AppImages.logo, height: 24),
-            const Gap(Insets.lg),
-            const Info(
-              'Add entries',
-              'Keep track of your income and expenses',
-              PhosphorIcons.tray,
-            ),
-            const Gap(Insets.lg),
-            const Info(
-              'Check insights',
-              'Detailed weekly and monthly charts based on your entries',
-              PhosphorIcons.lightning,
-            ),
-            const Gap(Insets.lg),
-            const Info(
-              'Make right decisions',
-              'Control your money flow and stay on top of your game',
-              PhosphorIcons.medal,
-            ),
-            const Spacer(),
-            Button(
-              "GET STARTED",
-              onTap: () => context.push(const ChooseCurrencyPage()),
-            ),
-            const Gap(Insets.lg),
-          ],
-        ),
+        // mainAxisSize: MainAxisSize.min,
+        children: [
+          const SizedBox(height: Insets.lg),
+          Image.asset(AppImages.logo, height: 24),
+          const SizedBox(height: Insets.lg),
+          const Info(
+            'Add entries',
+            'Keep track of your income and expenses',
+            PhosphorIcons.tray,
+          ),
+          const SizedBox(height: Insets.lg),
+          const Info(
+            'Check insights',
+            'Detailed weekly and monthly charts based on your entries',
+            PhosphorIcons.lightning,
+          ),
+          const SizedBox(height: Insets.lg),
+          const Info(
+            'Make right decisions',
+            'Control your money flow and stay on top of your game',
+            PhosphorIcons.medal,
+          ),
+          const SizedBox(height: Insets.md),
+          Button(
+            "GET STARTED",
+            onTap: () => context.push(const ChooseCurrencyPage()),
+          ),
+          Expanded(child: SizedBox.shrink())
+        ],
       ),
     );
   }

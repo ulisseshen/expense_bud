@@ -52,7 +52,7 @@ android {
         applicationId "com.app.expense_bud"
         minSdkVersion 16
         targetSdkVersion 30
-        compileSdkVersion 31
+        compileSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
